@@ -20,10 +20,13 @@ export const getStaticPaths = async () => {
 }
 
 
-export default ({country}) => (
+const Country =  ({country}) => {
+  return(
   <div>
     <h1> Hello {country.name} </h1>
     <p> Country code is {country.code} </p>
     </div>
+    );
+  }
 
-  )
+  export default Country;

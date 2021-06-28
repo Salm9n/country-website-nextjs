@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Link from 'next/link'
 
-export default class extends Component {
+export default class MyComponent extends Component {
   render () {
     return (
       <div>
@@ -24,3 +24,6 @@ export default class extends Component {
     )
   }
 }
+
+//Component.displayName = 'Component';
+//export default Component;
