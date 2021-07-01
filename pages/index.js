@@ -24,6 +24,3 @@ export default class MyComponent extends Component {
     )
   }
 }
-
-//Component.displayName = 'Component';
-//export default Component;
