@@ -280,7 +280,7 @@ export default class MyTable extends React.Component {
       const newArray = countryList.filter(function (e) {
         return e.includes(value)
       });
-      
+
       this.setState({
         country: newArray
       })
@@ -292,7 +292,7 @@ export default class MyTable extends React.Component {
   
     return(
     <>
-    <label for="country">Filter by country name:</label>
+    <label htmlFor="country">Filter by country name:</label>
     <input
      type="text"
      id="filter"
