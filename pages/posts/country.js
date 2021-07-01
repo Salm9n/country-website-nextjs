@@ -1,7 +1,7 @@
 import React from 'react';
 //import SimpleListMenu from '../menu/SimpleMenuListMenu'; // < Material UI element
 
-let rows = [
+let countryList = [
   "Afghanistan",
   "Åland Islands",
   "Albania",
@@ -254,13 +254,17 @@ let rows = [
 ];
 
 export default class MyTable extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state= {country: countryList};
+  }
 
-  createTable = () => {
+  createTable = (array) => {
 
-    let table = []
-    for (let i = 0; i < rows.length; i++) {
+    let table = []  
+    for (let i = 0; i < array.length; i++) {
       let children = []
-      children.push(<td style={{border: '1px solid black'}}>{rows[i]}</td>)
+      children.push(<td style={{border: '1px solid black'}}>{array[i]}</td>)
       table.push(<tr>{children}</tr>)
     }
     return table
@@ -268,11 +272,36 @@ export default class MyTable extends React.Component {
   }
 
   render() {
+    
+    const onChange = (event) => {
+      console.log(event.target.value)
+      const value = event.target.value
+  
+      const newArray = countryList.filter(function (e) {
+        return e.includes(value)
+      });
+      
+      this.setState({
+        country: newArray
+      })
+  
+  
+        console.log([...newArray.values()])
+      
+      };
+  
     return(
+    <>
+    <label for="country">Filter by country name:</label>
+    <input
+     type="text"
+     id="filter"
+     onChange= {onChange}></input>
       <table style={{border: '1px solid black'}}>
         <th>Country Name</th>
-        {this.createTable()}
+        {this.createTable(this.state.country)}
       </table>
+    </>
     )
   }
 
