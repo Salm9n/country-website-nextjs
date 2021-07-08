@@ -70,7 +70,7 @@ export default function BasicTable({ countryList }) {
 
   return (
   <>
-    <label for="country">Filter by country name:</label>
+    <label htmlFor="country">Filter by country name:</label>
     <input
      type="text"
      id="filter"
