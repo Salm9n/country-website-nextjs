@@ -27,7 +27,7 @@ const JavaScriptSnippets  = () => {
    
         <button id="submit_form" type="submit" className="btn btn-primary">Send</button>
     </div>
-    <p className= "left">Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+    <p className= "left">Powered by <a href="https://postmail.invotes.com" target="_blank" rel="noreferrer">PostMail</a></p>
 </form>
 
 
