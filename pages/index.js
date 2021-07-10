@@ -34,7 +34,7 @@ export default class MyComponent extends Component {
 			<div className="col-md-8 offset-md-2 info">
 				<h1 className="text-center">Salmans Next JS Website</h1>
 				<p className="text-center">
-					Welcome to my website where I'm practicing my Next JS skills 
+					{ "Welcome to my website where I'm practicing my Next JS skills "}
 				</p>
 				<a href="#" className="btn btn-md text-center">GET STARTED</a>
 			</div>
