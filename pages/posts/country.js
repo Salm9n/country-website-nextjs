@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/table.module.css';
 //import SimpleListMenu from '../menu/SimpleMenuListMenu'; // < Material UI element
 
 let countryList = [
@@ -292,15 +293,21 @@ export default class MyTable extends React.Component {
   
     return(
     <>
-    <label htmlFor="country">Filter by country name:</label>
-    <input
-     type="text"
-     id="filter"
-     onChange= {onChange}></input>
+    <div className = {styles.center}>
+      <div className="form-group has-search">
+        <span className="fa fa-search form-control-feedback"></span>
+          <input className ="form-control border-end-0 border rounded-pill"
+            type="text"
+            id="filter"
+            placeholder="search by country name"
+            onChange= {onChange}></input>
+      </div>
+    <br></br>
       <table style={{border: '1px solid black'}}>
         <th>Country Name</th>
         {this.createTable(this.state.country)}
       </table>
+    </div>
     </>
     )
   }

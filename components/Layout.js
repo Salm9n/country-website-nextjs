@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return (
@@ -8,7 +9,9 @@ const Layout = ({ children }) => {
             <title>Country Website</title>
             <link rel= "icon" href="/country.png" />
         </Head>
+    <Header />
     {children}
+    <Footer />
     </div>
     
       );

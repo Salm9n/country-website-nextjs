@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import styles from '../../styles/table.module.css';
 
 import { countries } from "../../country.js";
 import Link from "next/link";
@@ -25,11 +26,16 @@ const useStyles = makeStyles({
   table: {
     maxWidth: 500,
     "& .MuiTableCell-root": {
-      borderRight: "1px solid rgba(224, 224, 224, 1)" }
+      borderRight: "1px solid rgba(224, 224, 224, 1)",
+      borderLeft: "1px solid rgba(224, 224, 224, 1)"  } 
   },
 
   tableHead: {
     backgroundColor: '#ADD8E6'
+  },
+
+  tableCell: {
+    backgroundColor: 'white'
   },
 
   tableRow: {
@@ -70,12 +76,16 @@ export default function BasicTable({ countryList }) {
 
   return (
   <>
-    <label htmlFor="country">Filter by country name:</label>
-    <input
+  <div className = {styles.center}>
+    <div className="form-group has-search">
+      <span className="fa fa-search form-control-feedback"></span>
+    <input className ="form-control border-end-0 border rounded-pill"
      type="text"
      id="filter"
+     placeholder="search by country name"
      onChange= {onChange}></input>
-    <TableContainer component={Paper}>
+    </div>
+    <br></br>
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.tableHead}>
           <TableRow>
@@ -86,17 +96,17 @@ export default function BasicTable({ countryList }) {
         <TableBody>
           {value.map((country) => (
             <TableRow key={country.id}>
-              <TableCell>
+              <TableCell className={classes.tableCell}>
               <Link href={'/posts/[id]'} as={'/posts/' + country.name}>
-                <a>{country.name}</a>
+              <a className={styles.aunderline}>{country.name}</a>
                 </Link>
               </TableCell>
-              <TableCell align="right">{country.code}</TableCell>
+              <TableCell className={classes.tableCell} align="right">{country.code}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </div>
   </>
   );
 }
