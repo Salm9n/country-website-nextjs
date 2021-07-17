@@ -1,4 +1,4 @@
-
+import Head from 'next/head'
 
 const JavaScriptSnippets  = () => {
 
@@ -9,29 +9,41 @@ const JavaScriptSnippets  = () => {
         };
 
     return (
-        <>
-    <h2> JavaScript Practice Snippets </h2>
-    <br></br>
-    <form action="https://postmail.invotes.com/send"
-    method="post" id="email_form" onSubmit={onChange}>
+
+    <div className= "container my-container">
+        <div className="row">
+            <div className="col-8 fat-col">
+                <h3> Send me an Email! </h3>
+            </div>
+            <div className="col-4 fat-col">
+                <h3> My Links</h3>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-8 border-right">
+                <form action="https://postmail.invotes.com/send"
+                method="post" id="email_form" onSubmit={onChange}>
     
-    <div className="form-group">
-        <h3 className= "left"> Send me an Email!</h3>
-        <input type="text" className="form-control" name="subject" placeholder="Subject" />
-        <textarea name="text" className="form-control" placeholder="Message"></textarea>
-        <input type="hidden" name="access_token" value="1eraa7cld1npkup4xozgb574" />
-        <input type="hidden" name="success_url" value="/posts/contactme" />
-        <input type="hidden" name="error_url" value="/posts/contactme" />
-   
-
-   
-        <button id="submit_form" type="submit" className="btn btn-primary">Send</button>
+                    <div className="form-group">
+                        <input type="text" className="form-control" name="subject" placeholder="Subject" />
+                        <textarea name="text" className="form-control" placeholder="Message"></textarea>
+                        <input type="hidden" name="access_token" value="1eraa7cld1npkup4xozgb574" />
+                        <input type="hidden" name="success_url" value="/posts/contactme" />
+                        <input type="hidden" name="error_url" value="/posts/contactme" />
+                        <button id="submit_form" type="submit" className="btn btn-primary">Send</button>
+                    </div>
+                </form>
+                    <p className= "left">Powered by <a href="https://postmail.invotes.com" target="_blank" rel="noreferrer">PostMail</a></p>
+            </div>
+            <div className="col-4">
+                <a href="https://www.facebook.com/salman.mohammed.581" className="fa fa-facebook"></a>
+                <a href="https://github.com/Salm9n" className="fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/salman-mohammed-35157814a/" className="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/salm9n/" className="fa fa-instagram"></a>
+            </div> 
+        </div>
     </div>
-    <p className= "left">Powered by <a href="https://postmail.invotes.com" target="_blank" rel="noreferrer">PostMail</a></p>
-</form>
-
-
-        </>
+        
     );
 }
  

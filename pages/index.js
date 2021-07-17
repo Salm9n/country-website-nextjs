@@ -7,9 +7,13 @@ export default class MyComponent extends Component {
       <div className="container-fluid banner">
         <div className="row">
           <div className="col-md-12">
-            <nav className="navbar navbar-md">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
               <div className="navbar-brand">Salman Mohammed</div>
-                <ul className="nav">
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
                   <li className="nav-item">
                     <Link href="/">
                       <a className="nav-link">Home</a>
@@ -31,6 +35,7 @@ export default class MyComponent extends Component {
                       </Link>
                   </li>
                 </ul>
+              </div>
               </nav>
       </div>
 			<div className="col-md-8 offset-md-2 info">
@@ -38,7 +43,8 @@ export default class MyComponent extends Component {
 				<p className="text-center">
 					{ "Welcome to my website where I'm practicing my Next JS skills" }
 				</p>
-				<a href="#" className="btn btn-md text-center">GET STARTED</a>
+        <Link href="/posts/about">
+				<a className="btn btn-md text-center">GET STARTED</a></Link>
 			</div>
       </div>
       </div>
