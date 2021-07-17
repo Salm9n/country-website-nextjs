@@ -25,10 +25,10 @@ function AboutMe() {
                     
                 </div>
                 <div className="col-lg-4 offset-md-1 row2 align-self-center">
-                    My name is Salman Mohammed, I'm 23 years old and a programmer. I graduated from Northern Illinois in 2019 and am 
+                    My name is Salman Mohammed, I&apos;m 23 years old and a programmer. I graduated from Northern Illinois in 2019 and am 
                     building this website to get practice in using HTML, CSS, Bootsrap, React and Next JS. You can find out more about 
                     me on my <Link href="https://www.linkedin.com/in/salman-mohammed-35157814a/"><a>LinkedIn</a></Link> or <Link href="https://github.com/Salm9n"><a>GitHub</a></Link> . Scroll down to learn a bit 
-                    about things I've created on my own time!
+                    about things I&apos;ve created on my own time!
                 </div>
             </div>
             <div className="row border-bottom">
