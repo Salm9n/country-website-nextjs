@@ -81,7 +81,7 @@ export default function BasicTable({ countryList }) {
     <div className="form-group has-search">
       <h3> Table of all Countries</h3>
       <p>Click on a country for more information</p>
-    <input className ="form-control border-end-0 border rounded-pill"
+    <input className ="form-control border-end-0 border rounded-pill width"
      type="text"
      id="filter"
      placeholder="search by country name"

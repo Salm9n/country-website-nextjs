@@ -12,15 +12,8 @@ const JavaScriptSnippets  = () => {
 
     <div className= "container my-container">
         <div className="row">
-            <div className="col-8 fat-col">
+            <div className="col-lg-8 border-right">
                 <h3> Send me an Email! </h3>
-            </div>
-            <div className="col-4 fat-col">
-                <h3> My Links</h3>
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-8 border-right">
                 <form action="https://postmail.invotes.com/send"
                 method="post" id="email_form" onSubmit={onChange}>
     
@@ -35,7 +28,8 @@ const JavaScriptSnippets  = () => {
                 </form>
                     <p className= "left">Powered by <a href="https://postmail.invotes.com" target="_blank" rel="noreferrer">PostMail</a></p>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4">
+                <h3> My Links</h3>
                 <a href="https://www.facebook.com/salman.mohammed.581" className="fa fa-facebook"></a>
                 <a href="https://github.com/Salm9n" className="fa fa-github"></a>
                 <a href="https://www.linkedin.com/in/salman-mohammed-35157814a/" className="fa fa-linkedin"></a>

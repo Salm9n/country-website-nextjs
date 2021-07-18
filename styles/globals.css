@@ -118,7 +118,7 @@ a {
 
 	.med-row {
 		height: 250px;
-		margin-bottom: 200px;
+		margin-bottom: 300px;
 	}
 
 	.row2 {
@@ -179,6 +179,11 @@ a {
 	.container {
 		margin-left: 100px;
 	}
+
+	.width {
+		width: 500px;
+	}
+	
 
 
 	

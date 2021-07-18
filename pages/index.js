@@ -8,7 +8,7 @@ export default class MyComponent extends Component {
         <div className="row">
           <div className="col-md-12">
             <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
-              <div className="navbar-brand">Salman Mohammed</div>
+              <div className="navbar-brand"></div>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -25,8 +25,8 @@ export default class MyComponent extends Component {
                       </Link>
                     </li>
                   <li className="nav-item">
-                      <Link href="/posts/country">
-                       <a className="nav-link">Another Table</a>
+                      <Link href="/posts/about">
+                       <a className="nav-link">About Me</a>
                       </Link>
                   </li>
                   <li className="nav-item">
