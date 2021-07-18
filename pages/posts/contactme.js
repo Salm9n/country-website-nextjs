@@ -12,7 +12,7 @@ const JavaScriptSnippets  = () => {
 
     <div className= "container my-container">
         <div className="row">
-            <div className="col-lg-8 border-right">
+            <div className="col-lg-8 border-right" align="left">
                 <h3> Send me an Email! </h3>
                 <form action="https://postmail.invotes.com/send"
                 method="post" id="email_form" onSubmit={onChange}>

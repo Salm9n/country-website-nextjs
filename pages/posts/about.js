@@ -18,7 +18,7 @@ function AboutMe() {
                 </div>
             </div>
             <div className="row med-row justify-content-center">
-                <div className="col-lg-6 row2 border-right" align="center">
+                <div className="col-lg-4 row2 border-right" align="left">
                     <div className= "resize">
                         <Image className="round" src={me} alt="mylogo"/>
                     </div>
