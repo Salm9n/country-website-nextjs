@@ -78,6 +78,7 @@ a {
 	justify-content: flex-end;
 	align-items: flex-end;
 	border-bottom: 1px solid #ddd;
+	width: 100%;
   }
   nav a {
 	margin-left: 12px;

@@ -12,6 +12,8 @@ import styles from '../../styles/table.module.css';
 
 import { countries } from "../../country.js";
 import Link from "next/link";
+import { TableSortLabel } from '@material-ui/core';
+import { render } from 'react-dom';
 
 export const getStaticProps = async () => {
 
@@ -20,6 +22,18 @@ export const getStaticProps = async () => {
       countryList: countries,
     },
   }
+}
+
+function sortAsc (array,order) {
+  if (order === 'desc')
+    return array.sort();
+
+  if(order ==='asc')
+    return array.sort().reverse();
+}
+
+function sortDesc (array) { 
+  return array.sort().reverse();
 }
 
 const useStyles = makeStyles({
@@ -46,6 +60,23 @@ const useStyles = makeStyles({
 
 export default function BasicTable({ countryList }) {
 
+  const handleClick = (event) => {
+    console.log('click')
+    
+    if (order === 'asc') {
+      setOrder('desc')
+      console.log('hi1')
+    }
+
+    if (order === 'desc') {
+      setOrder('asc')
+      console.log('hi0')
+    }
+
+  };
+   
+
+
   const onChange = (event) => {
     console.log(event.target.value)
     const value = event.target.value
@@ -62,14 +93,24 @@ export default function BasicTable({ countryList }) {
 
   const classes = useStyles();
   const [value, setValue] = useState([countryList].flat())
+  const [order, setOrder] = useState('desc')
+  const [header, setHeader] = useState('Country Name')
+  console.log({order})
+
+  useEffect(() => { 
+    const newArray = sortAsc(countryList,order)
+    console.log([...countryList.values()])
+    setValue(newArray)
+  }, [ order] )
 
   useEffect(() => { 
     
     setValue([countryList].flat()   )
   }, [ countryList ] )
 
-  console.log('value',[...value.values()])
-  console.log('countryList',[...countryList.values()])
+
+
+
 
 
   
@@ -91,7 +132,14 @@ export default function BasicTable({ countryList }) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead className={classes.tableHead}>
           <TableRow>
-            <TableCell>Country Name</TableCell>
+            <TableCell>
+              <TableSortLabel
+                direction={order === 'asc' ? 'asc' : 'desc'}
+                onClick = {() => setOrder(order === 'asc' ? 'desc': 'asc')}
+              >
+              Country Name
+              </TableSortLabel>
+            </TableCell>
             <TableCell align ="right">Abbreviation</TableCell>
           </TableRow>
         </TableHead>
