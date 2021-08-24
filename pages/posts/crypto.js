@@ -74,7 +74,7 @@ export default function AlertDialogSlide() {
         <DialogTitle id="alert-dialog-slide-title">{"NEO"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-          Neo (formerly Antshares) is an open-source decentralized blockchain decentralized application platform founded in 2014 by Da HongFei and Erik Zhang. Since its rebranding to Neo from Antshares in 2017, the project&apos;s vision is to realize a "smart economy" by utilizing blockchain technology and smart contracts to issue and manage digitized assets.
+          Neo (formerly Antshares) is an open-source decentralized blockchain decentralized application platform founded in 2014 by Da HongFei and Erik Zhang. Since its rebranding to Neo from Antshares in 2017, the project&apos;s vision is to realize a &quot;smart economy&quot; by utilizing blockchain technology and smart contracts to issue and manage digitized assets.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
