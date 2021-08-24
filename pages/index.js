@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 import Link from 'next/link'
 
-export default class MyComponent extends Component {
-  render () {
+const IndexPage = ({ isDark, toggleChecked }) => {
+  console.log({isDark})
     return (
+    <> 
       <div className="container-fluid banner">
         <div className="row">
           <div className="col-md-12">
@@ -34,6 +35,11 @@ export default class MyComponent extends Component {
                         <a className="nav-link">Contact Me</a>
                       </Link>
                   </li>
+                  <li className="nav-item">
+                      <Link href="/posts/crypto">
+                        <a className="nav-link">Crypto</a>
+                      </Link>
+                  </li>
                 </ul>
               </div>
               </nav>
@@ -50,5 +56,6 @@ export default class MyComponent extends Component {
       </div>
 
     )
-  }
-}
+  </>
+    )}
+export default IndexPage;

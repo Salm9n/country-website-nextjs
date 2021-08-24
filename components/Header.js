@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../public/logo4.png'
+import NightContext from '../contexts/nightmode'
+import { useContext } from 'react'
 
-const Header = () => {
+const Header = ({ isDark, toggleChecked }) => {
     return (
+     <>      
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link href="/"><a className="navbar-brand">
         <Image src={logo} alt="mylogo" width={45} height={45}/></a></Link>
@@ -24,9 +27,13 @@ const Header = () => {
           <li className="nav-item">
             <Link href="/posts/contactme"><a className="nav-link">Contact</a></Link>
           </li>
+          <li className="nav-item">
+            <Link href="/posts/crypto"><a className="nav-link">Crypto</a></Link>
+          </li>
         </ul>
       </div>
 </nav>
+</>
       );
 }
  
