@@ -123,7 +123,7 @@ export default function BasicTable({ countryList }) {
      type="text"
      id="filter"
      placeholder="search by country name"
-     autocomplete="off"
+     autoComplete="off"
      onChange= {onChange}></input>
     </div>
     <br></br>

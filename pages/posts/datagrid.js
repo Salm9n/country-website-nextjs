@@ -29,7 +29,9 @@ const columns = [
     headerName: 'ID',
     headerClassName: 'super-app-theme--header',
     width: 300,
-    renderCell: (params) => (
+    renderCell: (params) => {
+        return (function Actions() {
+            return (
         <Link
      href={'/posts/[id]'}
      as={'/posts/' + params.id}
@@ -39,8 +41,10 @@ const columns = [
         {params.id}
      </Button>
   </Link>
-    ),
-  },
+    );
+    })();
+  }
+    },
   {
     field: 'code',
     headerName: 'Abbreviation',
