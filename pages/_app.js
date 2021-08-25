@@ -19,6 +19,8 @@ import { ThemeProvider } from "next-themes";
     return (
       <>
       <Head>
+      <title>Country Website</title>
+      <link rel= "icon" href="/country.png" />
        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
         <Component {...pageProps} />
