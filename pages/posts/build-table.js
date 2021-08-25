@@ -32,9 +32,6 @@ function sortAsc (array,order) {
     return array.sort().reverse();
 }
 
-function sortDesc (array) { 
-  return array.sort().reverse();
-}
 
 const useStyles = makeStyles({
   table: {
@@ -82,7 +79,7 @@ export default function BasicTable({ countryList }) {
     const value = event.target.value
 
     const newArray = countryList.filter(function (e) {
-      return e.name.includes(value)
+      return e.id.includes(value)
     });
 
     setValue(newArray)
@@ -94,7 +91,6 @@ export default function BasicTable({ countryList }) {
   const classes = useStyles();
   const [value, setValue] = useState([countryList].flat())
   const [order, setOrder] = useState('desc')
-  const [header, setHeader] = useState('Country Name')
   console.log({order})
 
   useEffect(() => { 
@@ -122,10 +118,12 @@ export default function BasicTable({ countryList }) {
     <div className="form-group has-search">
       <h1>Table of all Countries</h1>
       <p>Click on a country for more information</p>
+      <p>Click <Link href="/posts/datagrid"><a>here</a></Link> for an example using a Datagrid</p>
     <input className ="form-control border-end-0 border rounded-pill width"
      type="text"
      id="filter"
      placeholder="search by country name"
+     autocomplete="off"
      onChange= {onChange}></input>
     </div>
     <br></br>
@@ -147,8 +145,8 @@ export default function BasicTable({ countryList }) {
           {value.map((country) => (
             <TableRow key={country.id}>
               <TableCell className={classes.tableCell}>
-              <Link href={'/posts/[id]'} as={'/posts/' + country.name}>
-              <a className={styles.aunderline}>{country.name}</a>
+              <Link href={'/posts/[id]'} as={'/posts/' + country.id}>
+              <a className={styles.aunderline}>{country.id}</a>
                 </Link>
               </TableCell>
               <TableCell className={classes.tableCell} align="right">{country.code}</TableCell>
