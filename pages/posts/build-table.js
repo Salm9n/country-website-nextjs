@@ -79,7 +79,7 @@ export default function BasicTable({ countryList }) {
     const value = event.target.value
 
     const newArray = countryList.filter(function (e) {
-      return e.id.includes(value)
+      return e.id.toLowerCase().includes(value.toLowerCase())
     });
 
     setValue(newArray)
